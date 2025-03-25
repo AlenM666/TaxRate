@@ -17,6 +17,15 @@ public class HomeController {
     public Map<String, Object> home()
     {
         Map<String, Object> response = new HashMap<>();
+        /*
+        response.put("make POST req CURL", new String[]{
+                "curl -X POST" ,
+                        "-H \"Content-Type: application/json\"\" ,
+                        "-d '{\"traderId\":1,\"playedAmount\":8.2,\"odd\":5.2}'" ,
+                        "http://localhost:8080/api/tax/general/fixed\n"
+        });
+
+         */
         response.put("message", "Welcome to the Taxation API!");
         response.put("availableEndpoints", new String[]{
                 "/api/tax/general/rate",

@@ -75,10 +75,6 @@ public class TaxController {
         double grossReturn = request.getPlayedAmount() * request.getOdd();
         double winnings = grossReturn - request.getPlayedAmount();
         double taxAmount = WINNINGS_FIXED_TAX;
-        // One interpretation: subtract fixed tax from winnings and then add back the stake.
-        // Alternatively, if the business rule is to only return the net winnings,
-        // then possibleReturnAmountAfterTax would be (winnings - fixedTax).
-        // Here we subtract from the gross payout.
         response.setPossibleReturnAmount(grossReturn);
         response.setPossibleReturnAmountBefTax(winnings);
         response.setPossibleReturnAmountAfterTax(grossReturn - taxAmount);
